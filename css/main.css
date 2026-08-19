@@ -7,6 +7,7 @@
 :root {
     --bg: rgb(20 20 20);
     --text: rgb(255 255 255);
+    --text-muted: rgb(255 255 255 / 0.5);
 }
 
 @font-face {
@@ -38,18 +39,24 @@
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Courier Prime';
     background-color: var(--bg);
     color: var(--text);
 }
 
-.header {
+.header,
+.footer {
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .header-h1 {
     font-size: 35px;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .header-h1::after {
@@ -64,20 +71,27 @@ body {
     50% {opacity: 0;}
 }
 
-.header-nav ul {
+.main {
+    flex: 1;
+}
+
+.header-nav ul,
+.footer-nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding-top: 20px;
     list-style: none;
 }
 
-.header-nav a {
-    color: rgb(255 255 255 / 0.500);
+.header-nav a,
+.footer-nav a {
+    color: var(--text-muted);
     text-decoration: none;
 }
 
 .header-nav a:hover,
-.header-nav a.active {
-    color: rgb(255 255 255);
+.header-nav a.active,
+.footer-nav a:hover,
+.footer-nav a.active {
+    color: var(--text);
 }
