@@ -63,3 +63,21 @@ body {
 @keyframes blink {
     50% {opacity: 0;}
 }
+
+.header-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    list-style: none;
+}
+
+.header-nav a {
+    color: rgb(255 255 255 / 0.500);
+    text-decoration: none;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+    color: rgb(255 255 255);
+}
