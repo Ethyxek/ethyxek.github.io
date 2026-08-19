@@ -6,8 +6,9 @@
 
 :root {
     --bg: rgb(20 20 20);
+    --column: rgb(20 20 20);
     --text: rgb(255 255 255);
-    --text-muted: rgb(255 255 255 / 0.5);
+    --text-muted: rgb(255 255 255 / 0.6);
 }
 
 @font-face {
@@ -47,11 +48,19 @@ body {
     color: var(--text);
 }
 
-.main {
+.page {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1000px;
     margin-inline: auto;
+    background-color: var(--column);
+}
+
+.main {
+    flex: 1;
+    width: 100%;
     padding-inline: 20px;
     overflow-wrap: anywhere;
 }
